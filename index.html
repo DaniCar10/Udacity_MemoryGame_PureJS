@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Coiny|Fredericka+the+Great|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Match the Cards</h1>
+            <h3>... if you dear!!!!</h3>
+        </header>
+
+        <section class="score-panel">
+            <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+
+            <span class="moves">0</span> Moves
+            <div class="clock"></div>
+            <div class="restart" onclick="gameOn()">
+                <i class="fa fa-repeat"></i>
+            </div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <!-- Add type attribute for better code in JS -->
+            <li class="card" type="diamond">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card" type="plane">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="diamond">
+                <i class="fa fa-diamond"></i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
+            </li>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
+            </li>
+            <li class="card open show" type="bolt">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
+            </li>
+            <li class="card" type="plane">
+                <i class="fa fa-paper-plane-o"></i>
+            </li>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
+        </ul>
+
+        <!-- Modal with some customization to make it cool -->
+        <div id="modal" class="modal_background hide modal_pop">
+            <div class="modal_body">
+                <div class="modal_heading">
+                    <h2 class="modal_title">Parabéns!</h2>
+                    <h3 class="modal_subtitle">Você conseguiu finalizar a partida. Confira seu desempenho!</h3>
+                </div>
+                <div class="modal_stats">
+                    <div class="modal_time">Tempo = <span id=timeResult></span></div><br>
+                    <div class="modal_stars">Desempenho = <span id=starResult></span></div><br>
+                    <div class="modal_moves">Número de jogadas = <span id=moveResult></span> moves</div><br>
+                </div>
+                <div class="modal_buttons">
+                    <button id="newGame" onclick="newGame()">
+                      <a>nova partida</a>
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
